@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_mart/Homepage.dart';
+import 'pages/Homepage.dart';
+
+import 'pages/Login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     String day = "Ajay";
     return MaterialApp(
-      home: Home()
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.light),
+      initialRoute: "/login",
+      routes: {"/home": (context) => Home(), "/login": (context) => Login()},
     );
   }
 }
