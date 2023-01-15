@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_mart/Homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +15,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    String day = "Ajay";
     return MaterialApp(
-      home: Material(
-        child: Container(
-          child: Center(child: Text('Home'),),
-        ),
-      ),
+      home: Home()
     );
   }
 }
